@@ -1,6 +1,5 @@
 package jm.task.core.jdbc.dao;
 
-// -------------------------------------- Not used yet ---------------------------
 import jm.task.core.jdbc.model.User;
 
 import java.util.List;
