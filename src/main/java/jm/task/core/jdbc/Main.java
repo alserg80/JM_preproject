@@ -2,6 +2,7 @@ package jm.task.core.jdbc;
 
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserServiceImpl;
+import jm.task.core.jdbc.util.Util;
 
 import java.util.List;
 
@@ -12,7 +13,6 @@ public class Main {
 
         UserServiceImpl userService = new UserServiceImpl();
 
-        userService.dropUsersTable();
         userService.createUsersTable();
 
         userService.saveUser(testName + "1", testLastName + "1", (byte) 20);
@@ -27,6 +27,7 @@ public class Main {
 
         userService.cleanUsersTable();
         userService.dropUsersTable();
-        userService.closeConnection();
+        Util.shutdown();
     }
 }
+
