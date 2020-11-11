@@ -28,6 +28,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
         } catch (Exception e) {
             e.getMessage();
+            transaction.rollback();
         } finally {
             session.close();
         }
@@ -43,6 +44,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
         } catch (Exception e) {
             e.getMessage();
+            transaction.rollback();
         } finally {
             session.close();
         }
@@ -58,6 +60,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
         } catch (Exception e) {
             e.getMessage();
+            transaction.rollback();
         } finally {
             session.close();
         }
@@ -74,6 +77,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
         } catch (Exception e) {
             e.getMessage();
+            transaction.rollback();
         } finally {
             session.close();
         }
@@ -103,6 +107,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
         } catch (Exception e) {
             e.getMessage();
+            transaction.rollback();
         } finally {
             session.close();
         }

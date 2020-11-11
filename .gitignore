@@ -10,3 +10,4 @@
 out/
 target/
 *.iml
+src/main/resources
