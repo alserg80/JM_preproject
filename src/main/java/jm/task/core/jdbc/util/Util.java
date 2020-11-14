@@ -28,6 +28,8 @@ public class Util {
                     .setProperty("hibernate.connection.url", URL)
                     .setProperty("hibernate.connection.username", USERNAME)
                     .setProperty("hibernate.connection.password", PASSWORD)
+                    .setProperty("hibernate.dialect","org.hibernate.dialect.MySQLDialect")
+                    .setProperty("hibernate.show_sql", "true")
                     .addAnnotatedClass(User.class);
             StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
             sessionFactory = configuration.buildSessionFactory(builder.build());
